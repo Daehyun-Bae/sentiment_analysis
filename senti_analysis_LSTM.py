@@ -209,4 +209,5 @@ with open('./log/log_{}.txt'.format(test_num), 'a') as fp:
                         if cor[idx]:
                             f.write('{} @{} @{}\n'.format(sentence, label_map[pred[idx]], label_map[label_ts[idx]]))
 
+            # save check point
             saver.save(sess=sess, save_path='./weight-{}_{}-{:.3f}.ckpt'.format(test_num, e, acc))

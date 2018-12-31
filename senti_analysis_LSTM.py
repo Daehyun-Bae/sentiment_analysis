@@ -5,6 +5,10 @@ import argparse
 import tensorflow as tf
 from tensorflow.contrib import slim
 
+"""
+2018.12.20
+Sentiment analysis using LSTM
+"""
 parse = argparse.ArgumentParser()
 parse.add_argument('--lr', type=float, default=0.005, help='the learning rate')
 parse.add_argument('--epoch', type=int, default=2000, help='the number of epochs')
@@ -15,8 +19,8 @@ parse.add_argument('--h_unit', type=int, default=64, help='the number of hidden 
 
 label_map = ['negative', 'neutral', 'positive']
 args = parse.parse_args()
-data_dic = './vectorized'
-data_file = 'Senti_sentences_flat2.pkl'
+data_dic = ''
+data_file = ''      # define path to pre-embedded dataset
 data_path = os.path.join(data_dic, data_file)
 test_num = args.testnum
 gpu = args.gpu

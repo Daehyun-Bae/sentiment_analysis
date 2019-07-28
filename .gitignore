@@ -1,0 +1,8 @@
+# word2vec binary file
+GoogleNews-vectors-negative300.bin
+# xml
+*.xml
+# .idea
+.idea/*
+# zip
+*.zip
